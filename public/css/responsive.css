@@ -1,19 +1,21 @@
+/* Reset styles */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html {
+/* Body and container adjustments */
+html, body {
     height: 100%;
 }
-
 body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
 
+/* Navbar styling */
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -31,25 +33,25 @@ body {
     color: #1abc9c !important;
 }
 
+/* Footer styling */
 .footer-padding {
-	padding-bottom: 60px;
+    padding-bottom: 60px;
 }
-
 .footer {
     margin-top: auto;
-	display: flex;
+    display: flex;
     justify-content: center;
-	width: 100%;
-	height: 60px;
-	background-color: #1abc9c;
+    width: 100%;
+    height: 60px;
+    background-color: #1abc9c;
 }
-
 .footer p {
-	margin-top: 25px;
-	font-size: 12px;
-  color: #fff;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #fff;
 }
 
+/* Truncated paragraph */
 .truncated-paragraph {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -57,11 +59,11 @@ body {
     max-width: 50%;
 }
 
+/* Button styling */
 .btn {
     text-decoration: none;
     color: black;
 }
-
 button {
     border-radius: 6px;
     width: 120px;
@@ -69,12 +71,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* font-weight: bold; */
 }
-
 button:hover {
-    /* width: 125px;
-    height: 37px; */
     background-color: #d0f6e9;
     font-weight: bolder;
 }
