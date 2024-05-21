@@ -65,14 +65,18 @@ app.get("/compose" , function(req, res) {
   res.render("compose")
 });
 
-app.post("/compose" , function(req, res) {
-  const post = new Post ({
-    title : req.body.postTitle, 
-    content : req.body.postBody 
-  });
-  post.save(function(err) {
-    if(!err) res.redirect("/");
-  });
+app.post("/compose", async (req, res) => {
+  try {
+    const post = new Post({
+      title: req.body.postTitle,
+      content: req.body.postBody,
+    });
+    await post.save(); // Save the post to the database
+    res.redirect("/");
+  } catch (err) {
+    console.error("Error saving post:", err);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 const port = process.env.PORT || 3000;
